@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vk Cup Android</string>
+    <string name="instruction_title">Отметьте то, что вам интересно, чтобы настроить Дзен</string>
+    <string name="skip_instructions_text">Позже</string>
+    <string name="continue_button_title">Продолжить</string>
+    <string name="onboarding_ending_text">Онбординг завершен</string>
+    <string name="onboarding_skip_title">Теперь вы можете завершить онбординг</string>
+</resources>

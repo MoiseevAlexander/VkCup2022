@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dzenCategoriesFragment">
+
+    <fragment
+        android:id="@+id/dzenCategoriesFragment"
+        android:name="vk.cup.android.presentation.dzen_category.DzenCategoriesFragment"
+        android:label="DzenCategoriesFragment" />
+
+</navigation>

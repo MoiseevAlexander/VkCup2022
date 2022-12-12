@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/onboardingTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_16"
+        android:layout_marginTop="@dimen/normal_16"
+        android:layout_marginEnd="@dimen/normal_16"
+        android:text="@string/instruction_title"
+        android:textColor="@color/direction_text_color"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintBottom_toTopOf="@id/titleGuidline"
+        app:layout_constraintEnd_toStartOf="@id/skipOnboardingButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/skipOnboardingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_16"
+        android:layout_marginTop="@dimen/normal_16"
+        android:layout_marginEnd="@dimen/normal_16"
+        android:text="@string/onboarding_skip_title"
+        android:textColor="@color/direction_text_color"
+        android:textSize="@dimen/text_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/titleGuidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skipOnboardingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_16"
+        android:background="@drawable/instruction_button_background"
+        android:text="@string/skip_instructions_text"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintBottom_toBottomOf="@id/onboardingTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/onboardingTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/instructionsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="skipOnboardingButton, onboardingTitle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/titleGuidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/normal_54" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dzenCategoriesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_8"
+        android:layout_marginTop="@dimen/normal_24"
+        android:layout_marginEnd="@dimen/normal_8"
+        app:layout_constraintTop_toBottomOf="@id/titleGuidline"
+        tools:itemCount="5"
+        tools:listitem="@layout/dzen_category_unselected_item" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/openNextScreenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_64"
+        android:background="@drawable/continue_button_background"
+        android:paddingStart="@dimen/normal_50"
+        android:paddingTop="@dimen/normal_30"
+        android:paddingEnd="@dimen/normal_50"
+        android:paddingBottom="@dimen/normal_30"
+        android:text="@string/continue_button_title"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
